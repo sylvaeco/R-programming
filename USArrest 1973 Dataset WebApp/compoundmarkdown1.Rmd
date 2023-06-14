@@ -1,0 +1,77 @@
+
+### Dataset Section
+This area is dedicated to explaining the dashboard in a simple manner. The dashboard was made using R shiny while the documentation was made with R Markdown.
+The data used for the project is the **US Arrest Data** gotten from base R, i.e. the data follows the R programming language or can be found in it. 
+For ease of navigation, the dashboard consist of 3 distinct sidebars with each having it's set of panels.  The sidebars are thus;
+
+1.	Dataset.   
+2.	Visualization.    
+3.	Choropleth Map.    
+Components of the Dataset are;   
+ + About.  
+ + Data.  
+ + Structure.  
+ + Summary Statistics.  
+ + Documentation.
+
+About: This is a static page or panel which is focused on giving a brief introduction to the dataset used for the project.
+**Data:** The `Data` section gives a data-frame presentation of the data(US Arrest). The box `Show` allows the user to select how many data rows to view at one instance, the `Search` box allows user input search values that are in the data frame.   
+**NB:** When input that does not belong to the data frame is entered, the user gets an empty row that says "No matching records found". At the base of the data frame are the navigation button which allows user skim through the data frame easily.  
+**Structure:** The `Structure` section shows the data in their structural form, i.e
+the first line of the output shows us the `data.frame` which is summarized to have 50 observations(rows) and 5 variables(columns). After that, we have the variables listed  with all starting with the '$' and their data nature preceding them.   
+1. `num`: This is short for 'numeric' which means number that can have decimals in them.    
+2. `int`: short for 'integers' which are number that are whole numbers with no instance of decimal numbers being inclusive in it and;   
+3. `chr`: representing 'character' which are part of the data that were not statistically evaluated but were included to give more insight into then data.
+
+
+**Summary Statistics:** The `Summary Statistics` section which uses simple summary statistics estimators to evaluate the US Arrest data set. The estimators used are as follows:
+
+1. `Min`: This is the *minimum* or the first value of the variable under consideration when arranged in an ascending order. 
+
+2. `1st Qu`: This is  the first part or 25% of a variable that has been divided into four(4) equal parts after being arranged in an ascending order or descending order.
+
+3. `Median`: This  is  the middle value of a variable which has been arranged in an ascending or descending order.
+
+4. `Mean`: This is gotten by adding all the values of the variable and dividing the total by the total count of the rows of the variable.
+
+5. `3rd Qu`: This is the third 25% or simply 75% of the variable which has been ordered accordingly, either ascending or descending.
+
+6. `Max`: This is the opposite of min and represents *Maximum* which is the highest value in a variable that has been ordered.
+
+
+### Visualization
+At the  **Visualization** `sidebar`, the panels encountered are thus;
+**Crime Trends by State:** This panel has an interactive button underneath the Visualization with "Murder" already selected as the default option. Clicking on the button brings out a list of other options that allows the users get useful trend information. After selection of the variable the view in the "Crime Trends by State", the data in the panel adjusts according with extra features which are* '*drop-down panes* the allows users view the 5 highest or lowest rates of the variable selected. You can access some more features such as `download` as png( which means as a picture) and `zoom` on the plot by hovering your mouse over the plot. 
+
+**Distribution:** This panel  uses a combination of the `Box plot` and `Histogram` to study  the variable selected from the option under the "Visualization" sidebar. The purpose of this is to observe the level of variability of the data  such as the outliers and unusual data point involved for the study. The histogram reveals the data probability distribution while the box plot tells if the distribution is symmetric or skewed.
+
+**Correlation Matrix:** This is a table which show the correlation between all the possible pairs of the the variables used in the study.
+
+**Relationship Among Arrest Types & Urban Population:** This is simply a  visual rendering of the data selected using the  scatter-plot and the regression line passing through the plot.
+
++ Scatter plot: A scatter plot uses dot to represent values for two different numeric variables.
+
++ LM: This is the Linear Model and is used in R programming language to fit linear regression models.
+
++ LOESS: This is a non-parametric regression technique that uses weighted regression to fit a smooth curve through points in a scatter plots used in R programming language to fit linear regression models.
+
+> In this Visualization section, it should be known that all the panel have interactive buttons underneath the Visualization sidebar when clicked. The interactive buttons all have default values that can be changed by the user to get the desired output. 
+
+### Choropleth Map
+The **Choropleth Map** Sidebar is one which has a map filled with the states of the country under study(USA). The names of the states are abbreviated and filled  with color indicated the numbers of cases of the crime per 100,000 in each state.
+
+>References   
+
+The following sources were consulted when creating this WebApp;     
+(**NB**) You can access the link by clicking  on  the sources.)   
+1. [R shiny Dashboard Project| 1973 USArrests Dashboard for beginners|R Shiny Tutorials for Beginners by Abhinav Agrawal](https://youtu.be/tlOBVZx8Hy0)  
+2. [Summarising Data by DataAnalytics.org.uk.](https://www.dataanalytics.org.uk/data-analytics-knowledge-base-tips-tricks-r-excel/statistics-guide/data-summary/)  
+3. [Histogram and Box Plot by CTIoolkit Content Team.](https://citoolkit.com/articles/histograms-and-boxplots/)  
+4. [Correlation Matrix by CFI Team.](https://corporatefinanceinstitute.com/resources/excel/study/correlation-matrix/#:~:text=A%20correlation%20matrix%20is%20simply,patterns%20in%20the%20given%20data.)   
+5. [A Complete Guide to Scatter Plots by Mike Yi (2021), Chartio Data Tutorials.](https://chartio.com/learn/charts/what-is-a-scatter-plot/)   
+6. [LM:Fitting Linear Models by RDocumentation.](https://www.rdocumentation.org/packages/stats/versions/3.6.2/topics/lm)   
+7. [What is Loess Regression by Rick Wicklin (2016), SAS Blog.](https://blogs.sas.com/content/iml/2016/10/17/what-is-loess-regression.html#:~:text=Loess%20regression%20is%20a%20nonparametric,model%20with%20a%20parametric%20curve.)
+
+
+### Credits   
+I am indebted to [Abhinav Agrawal](https://youtu.be/tlOBVZx8Hy0) as a majority of what went into this WebApp was from his work on [Youtube](youtube.com), [Juan. E Galvan](https://www.udemy.com/user/juangalvan3/) and [Ismail Tigrek](https://www.udemy.com/user/ismail-tigrek/) whose teachings has given me the confidence to research more, which is why i am currently researching how to make this dashboard more unique with themes. More WebApps on the way people!!!...
